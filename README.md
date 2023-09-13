@@ -1,66 +1,16 @@
-## Foundry
+# MoodNFT: Dynamic NFT
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+MoodNFT is a project built on Solidity using the Foundry toolkit, leveraging the OpenZeppelin library. The primary objective of this project is to deploy a smart contract on the Ethereum blockchain, enabling users to mint Non-Fungible Tokens (NFTs) with a dynamic mood attribute by invoking the `mintNft` function.
 
-Foundry consists of:
+The contract is deployed on the Sepolia testnet at the following address [0xD50d4bb637896E020c4A25e611eab359ceb9DB6D](https://sepolia.etherscan.io/address/0xD50d4bb637896E020c4A25e611eab359ceb9DB6D#code).
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## Key Features
 
-## Documentation
+- **NFT Minting**: Users have the ability to mint an NFT, the image attribute of which symbolizes a cheerful smiley, representing a positive mood.
+- **Mood Flip Functionality**: By calling the `flipMood` function, users can switch the NFT image from a happy smiley to a sad one, and vice versa, adding a dynamic element to the NFT.
+- **ERC721 Compliance**: The smart contract adheres to the ERC721 standard, utilizing the OpenZeppelin's ERC721 contract for NFT creation.
+- **On-Chain Metadata Storage**: In order to ensure permanent data availability, the metadata of the NFT is stored directly on the blockchain. This is achieved by encoding the data URI in base64.
 
-https://book.getfoundry.sh/
+## How to Use
 
-## Usage
-
-### Build
-
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+To utilize the contract, it first needs to be deployed on the Ethereum blockchain. Post-deployment, the `mintNft` function can be invoked to mint a new NFT, which will initially exhibit a happy mood. The mood of the NFT can be altered by calling the `flipMood` function, passing the token ID of the NFT as an argument.
