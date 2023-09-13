@@ -14,3 +14,16 @@ The contract is deployed on the Sepolia testnet at the following address [0xD50d
 ## How to Use
 
 To utilize the contract, it first needs to be deployed on the Ethereum blockchain. Post-deployment, the `mintNft` function can be invoked to mint a new NFT, which will initially exhibit a happy mood. The mood of the NFT can be altered by calling the `flipMood` function, passing the token ID of the NFT as an argument.
+
+## NFTs' images
+
+<div style="display: flex; justify-content: space-around; align-items: center;">
+  <div style="display: flex; flex-direction: column;">
+    <img src="./img/happy-face.svg" alt="Happy mood image" width="200"/>
+    <span style="text-align: center;">Happy mood image</span>
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <img src="./img/sad-face.svg" alt="Sad mood image" width="200"/>
+    <span style="text-align: center;">Sad mood image</span>
+  </div>
+</div>
